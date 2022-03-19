@@ -4,15 +4,13 @@
     box-sizing: border-box;
 }
 #app{
-    min-width: 750px;
     margin: auto;
     display: flex;
     justify-content: center;
 }
 .todo-list-app{
     border-collapse: collapse;
-    /* min-width: 750px; */
-    width: 80%;
+    width: 90vw;
 }
 .todo-list-app *{
     font-family: sans-serif;
@@ -34,28 +32,24 @@
 .input:focus{
     border-color: #524c4c;
 }
-.input, .edit-entry, .delete-entry, .new-entry{
+.input, .delete-entry, .new-entry{
     height: 40px;
     font-size: 15px;
     padding: 0 10px;
     margin: 0;
     box-sizing: border-box;
 }
-.delete-entry, .edit-entry{
+.delete-entry{
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-end;
     background: none;
     border: none;
-    color: red;
-    width: 40px;
+    color: blue;
+    width: 100%;
     border-radius: 50%;
     outline: none;
-    cursor: pointer;
     transition: all ease-in-out 0.9s;
-}
-.delete-entry:hover, .edit-entry:hover{
-    background: rgba(255, 0, 0, 0.1);
 }
 .controls{
     width: 100%;
@@ -68,15 +62,19 @@
     border-radius: 5px;
     cursor: pointer;
     border: rgb(179, 170, 170) 1px solid;
-    transition: all ease-in-out 0.9s;
+    transition: all ease-in-out 0.5s;
 }
 .new-entry:hover{
     background: rgba(36, 2, 2, 0.1);
 }
-.fa{
+.fa-trash{
     color: blue;
-    font-size: 20px;
+    font-size: 25px;
+    text-align: right;
+    cursor: pointer;
+    transition: all ease-in-out 0.4s;
+
 }
 .fa:hover{
-    color: green;
+    color: rgb(94, 211, 94);
 }
